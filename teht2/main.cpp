@@ -3,7 +3,7 @@
 
 
 int main(){
-    Game g = new Game(30);
+    Game g(30);
 
     g.play();
     return 0;
