@@ -3,10 +3,16 @@
 
 Game::Game(int x) {
     maxNumber = x;
+
+    numOfGuesses = 0;
+    playerGuess = -1;
+    randomNumber = -1;
+}
+Game::~Game()
+{
 }
 void Game::play(){
     randomNumber = (std::rand() % maxNumber) + 1;
-    playerGuess = -1;
 
     while (playerGuess != randomNumber)
     {
