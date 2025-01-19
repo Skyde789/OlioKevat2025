@@ -6,11 +6,12 @@ public:
    Game(int x);
    ~Game();
    void play();
-   void printGameResult();
+   
 private:
    int maxNumber;
    int playerGuess;
    int randomNumber;
    int numOfGuesses;
+   void printGameResult();
 };  
 #endif // MYCLASS_H

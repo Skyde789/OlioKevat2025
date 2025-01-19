@@ -2,15 +2,19 @@
 #include <iostream>
 
 Game::Game(int x) {
+
     maxNumber = x;
 
     numOfGuesses = 0;
     playerGuess = -1;
     randomNumber = -1;
+
+    std::cout << "DEBUG Game::Game(): Object initialized with " << maxNumber << " as the max value\n";
 }
-Game::~Game()
-{
+Game::~Game() {
+    std::cout << "DEBUG Game::~Game(): Object cleared from memory\n";
 }
+
 void Game::play(){
     randomNumber = (std::rand() % maxNumber) + 1;
 
@@ -33,5 +37,5 @@ void Game::play(){
 }
 
 void Game::printGameResult(){
-    std::cout << numOfGuesses;
+    std::cout << "Arvasit " << numOfGuesses << " kertaa!\n";
 }
