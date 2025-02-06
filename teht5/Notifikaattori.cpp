@@ -17,12 +17,19 @@ void Notifikaattori::lisaa(Seuraaja* ptr)
 
 void Notifikaattori::poista(Seuraaja* ptr)
 {
+	if (seuraajat == ptr) {
+		ptr->next = seuraajat->next;
+		seuraajat = ptr;
+		return;
+	}
+
 	Seuraaja* i = seuraajat;
 
 	while (i != nullptr) {
 		if (i->next == ptr)
 		{
 			i->next = i->next->next;
+			return;
 		}
 
 		i = i->next;
